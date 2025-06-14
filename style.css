@@ -34,8 +34,8 @@ body {
 }
 
 .avatar {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     background: linear-gradient(135deg, #667eea, #764ba2);
     border-radius: 50%;
     display: flex;
@@ -44,7 +44,23 @@ body {
     margin: 0 auto 20px;
     font-size: 32px;
     color: white;
-    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+    overflow: hidden;
+    position: relative;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+.profile-image {
+    width: 120%;
+    height: 120%;
+    object-fit: cover;
+    object-position: center 20%;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.avatar:hover .profile-image {
+    transform: scale(1.1);
 }
 
 .name {
